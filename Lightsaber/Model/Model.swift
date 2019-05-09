@@ -12,6 +12,9 @@ import AVFoundation
 class Model {
     
     var turnSaberOnAudio: AVAudioPlayer = AVAudioPlayer()
+    var turnSaberOffAudio: AVAudioPlayer = AVAudioPlayer()
+    var whichLightsaber = String()
+    var isSaberOn = Bool()
     
     func turnSaberOn() {
         let turnSaberOnPath = Bundle.main.path(forResource: "SaberOn", ofType: "wav")
@@ -23,4 +26,14 @@ class Model {
         }
     }
     
+    func turnSaberOff() {
+        let turnSaberOffPath = Bundle.main.path(forResource: "SaberOff", ofType: "mp3")
+        do {
+            turnSaberOffAudio = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: turnSaberOffPath!))
+        }
+        catch {
+            print(error)
+        }
+    }
 }
+

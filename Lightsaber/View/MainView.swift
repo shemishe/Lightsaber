@@ -43,24 +43,35 @@ class MainView: UIView {
         return image
     }()
     
+    let changeSideButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Dark Side", for: .normal)
+        button.adjustsImageWhenHighlighted = false
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     func addViewSetup() {
         self.addSubview(backgroundImage)
         self.addSubview(saberImage)
         self.addSubview(lightsaberImage)
+        self.addSubview(changeSideButton)
     }
     
     func addConstraintSetup() {
         backgroundImage.anchorWithConstant(top: self.topAnchor, bottom: self.bottomAnchor, leading: self.leadingAnchor, trailing: self.trailingAnchor, paddingTop: 0, paddingBottom: 0, paddingLeading: 0, paddingTrailing: 0, width: 0, height: 0)
         
+        changeSideButton.anchorWithConstant(top: self.topAnchor, bottom: nil, leading: nil, trailing: self.trailingAnchor, paddingTop: 35, paddingBottom: 0, paddingLeading: 0, paddingTrailing: -25, width: 0, height: 0)
+        
         lightsaberImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         lightsaberImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.25).isActive = true
-        lightsaberImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.50).isActive = true
-        lightsaberImage.anchorWithConstant(top: nil, bottom: self.bottomAnchor, leading: nil, trailing: nil, paddingTop: 0, paddingBottom: -60, paddingLeading: 0, paddingTrailing: 0, width: 0, height: 0)
+        lightsaberImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.17).isActive = true
+        lightsaberImage.anchorWithConstant(top: nil, bottom: self.bottomAnchor, leading: nil, trailing: nil, paddingTop: 0, paddingBottom: -40, paddingLeading: 0, paddingTrailing: 0, width: 0, height: 0)
         
         saberImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        saberImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.75).isActive = true
-        saberImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.50).isActive = true
-        saberImage.anchorWithConstant(top: nil, bottom: lightsaberImage.topAnchor, leading: nil, trailing: nil, paddingTop: 0, paddingBottom: 100, paddingLeading: 0, paddingTrailing: 0, width: 0, height: 0)
+//        saberImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.65).isActive = true
+//        saberImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.55).isActive = true
+        saberImage.anchorWithConstant(top: nil, bottom: lightsaberImage.topAnchor, leading: nil, trailing: nil, paddingTop: 0, paddingBottom: 27, paddingLeading: 0, paddingTrailing: 0, width: 0, height: 0)
     }
         
 }

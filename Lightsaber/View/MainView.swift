@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 class MainView: UIView {
+    
+    var saberImageHeightConstraint: NSLayoutConstraint!
+    var saberImageWidthConstraint: NSLayoutConstraint!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
@@ -72,6 +76,11 @@ class MainView: UIView {
 //        saberImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.65).isActive = true
 //        saberImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.55).isActive = true
         saberImage.anchorWithConstant(top: nil, bottom: lightsaberImage.topAnchor, leading: nil, trailing: nil, paddingTop: 0, paddingBottom: 27, paddingLeading: 0, paddingTrailing: 0, width: 0, height: 0)
+        
+        saberImageHeightConstraint = NSLayoutConstraint(item: self.saberImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 1)
+        saberImageWidthConstraint = NSLayoutConstraint(item: self.saberImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 1)
+        saberImageHeightConstraint.isActive = true
+        saberImageWidthConstraint.isActive = true
     }
         
 }

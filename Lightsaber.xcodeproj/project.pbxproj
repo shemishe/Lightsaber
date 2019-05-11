@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E95073F722849684000BE472 /* SaberOff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E95073F622849684000BE472 /* SaberOff.mp3 */; };
+		E9812B9B228555990043F1E5 /* SaberOff.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E9812B9A228555990043F1E5 /* SaberOff.m4a */; };
+		E9812B9D2286826B0043F1E5 /* longhum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9812B9C2286826B0043F1E5 /* longhum.mp3 */; };
+		E9812BA2228687420043F1E5 /* saberhit1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9812B9E228687410043F1E5 /* saberhit1.wav */; };
+		E9812BA3228687420043F1E5 /* saberhit4.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9812B9F228687410043F1E5 /* saberhit4.wav */; };
+		E9812BA4228687420043F1E5 /* saberhit3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9812BA0228687410043F1E5 /* saberhit3.wav */; };
+		E9812BA5228687420043F1E5 /* saberhit2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9812BA1228687420043F1E5 /* saberhit2.wav */; };
 		E990B59E228006950047467C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990B59D228006950047467C /* AppDelegate.swift */; };
 		E990B5A0228006950047467C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990B59F228006950047467C /* MainViewController.swift */; };
 		E990B5A5228006960047467C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E990B5A4228006960047467C /* Assets.xcassets */; };
@@ -19,7 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E95073F622849684000BE472 /* SaberOff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SaberOff.mp3; sourceTree = "<group>"; };
+		E9812B9A228555990043F1E5 /* SaberOff.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = SaberOff.m4a; sourceTree = "<group>"; };
+		E9812B9C2286826B0043F1E5 /* longhum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = longhum.mp3; sourceTree = "<group>"; };
+		E9812B9E228687410043F1E5 /* saberhit1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = saberhit1.wav; sourceTree = "<group>"; };
+		E9812B9F228687410043F1E5 /* saberhit4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = saberhit4.wav; sourceTree = "<group>"; };
+		E9812BA0228687410043F1E5 /* saberhit3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = saberhit3.wav; sourceTree = "<group>"; };
+		E9812BA1228687420043F1E5 /* saberhit2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = saberhit2.wav; sourceTree = "<group>"; };
 		E990B59A228006950047467C /* Lightsaber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lightsaber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E990B59D228006950047467C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E990B59F228006950047467C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +59,12 @@
 				E990B59C228006950047467C /* Lightsaber */,
 				E990B59B228006950047467C /* Products */,
 				E990B5BF228206D10047467C /* SaberOn.wav */,
-				E95073F622849684000BE472 /* SaberOff.mp3 */,
+				E9812B9A228555990043F1E5 /* SaberOff.m4a */,
+				E9812B9C2286826B0043F1E5 /* longhum.mp3 */,
+				E9812B9E228687410043F1E5 /* saberhit1.wav */,
+				E9812BA1228687420043F1E5 /* saberhit2.wav */,
+				E9812BA0228687410043F1E5 /* saberhit3.wav */,
+				E9812B9F228687410043F1E5 /* saberhit4.wav */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,9 +173,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9812BA2228687420043F1E5 /* saberhit1.wav in Resources */,
+				E9812BA3228687420043F1E5 /* saberhit4.wav in Resources */,
 				E990B5C0228206D10047467C /* SaberOn.wav in Resources */,
+				E9812BA5228687420043F1E5 /* saberhit2.wav in Resources */,
+				E9812B9B228555990043F1E5 /* SaberOff.m4a in Resources */,
 				E990B5A8228006960047467C /* LaunchScreen.storyboard in Resources */,
-				E95073F722849684000BE472 /* SaberOff.mp3 in Resources */,
+				E9812B9D2286826B0043F1E5 /* longhum.mp3 in Resources */,
+				E9812BA4228687420043F1E5 /* saberhit3.wav in Resources */,
 				E990B5A5228006960047467C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

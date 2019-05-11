@@ -11,48 +11,48 @@ import UIKit
 class MainViewController: UIViewController {
     var mainView: MainView { return self.view as! MainView }
     private var lightsaberModel = Model()
-    
-    var saberImageHeightConstraint: NSLayoutConstraint!
-    var saberImageWidthConstraint: NSLayoutConstraint!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         lightsaberModel.whichLightsaber = "luke"
         lightsaberModel.isSaberOn = false
-        saberImageHeightConstraint = NSLayoutConstraint(item: mainView.saberImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 1)
-        saberImageWidthConstraint = NSLayoutConstraint(item: mainView.saberImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 1)
-        saberImageHeightConstraint.isActive = true
-        saberImageWidthConstraint.isActive = true
         mainView.lightsaberImage.addTarget(self, action: #selector(self.lightsaberTapped), for: .touchUpInside)
         mainView.changeSideButton.addTarget(self, action: #selector(self.changeLightsaberTapped), for: .touchUpInside)
-        lightsaberModel.turnSaberOn()
     }
     
     override func loadView() {
         self.view = MainView(frame: UIScreen.main.bounds)
     }
-
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEvent.EventSubtype.motionShake {
+            
+        }
+    }
+    
     @objc func lightsaberTapped() {
         print("lightsaber open!")
         
-        if lightsaberModel.isSaberOn == false {
+        if !lightsaberModel.isSaberOn {
             UIView.animate(withDuration: 0.2, animations: {
-                self.saberImageHeightConstraint.constant = 530
-                self.saberImageWidthConstraint.constant = 210
+                self.mainView.saberImageHeightConstraint.constant = 530
+                self.mainView.saberImageWidthConstraint.constant = 210
                 self.mainView.layoutIfNeeded()
                 self.viewDidLayoutSubviews()
             }, completion: nil)
-            lightsaberModel.turnSaberOnAudio.play()
+            lightsaberModel.turnSaberOnAudio?.play()
             lightsaberModel.isSaberOn = true
+            lightsaberModel.saberHumAudio?.play()
         } else {
             UIView.animate(withDuration: 0.2, animations: {
-                self.saberImageHeightConstraint.constant = 1
-                self.saberImageWidthConstraint.constant = 1
+                self.mainView.saberImageHeightConstraint.constant = 1
+                self.mainView.saberImageWidthConstraint.constant = 1
                 self.mainView.layoutIfNeeded()
                 self.viewDidLayoutSubviews()
             }, completion: nil)
-            lightsaberModel.turnSaberOffAudio.play()
+            lightsaberModel.turnSaberOffAudio?.play()
             lightsaberModel.isSaberOn = false
+            lightsaberModel.saberHumAudio?.stop()
         }
     }
     
@@ -63,10 +63,12 @@ class MainViewController: UIViewController {
             lightsaberModel.whichLightsaber = "vader"
             mainView.lightsaberImage.setImage(UIImage(named: "vaderlightsaber"), for: .normal)
             mainView.saberImage.image = UIImage(named: "redsaber")
+            mainView.changeSideButton.setTitle("Jedi Side", for: .normal)
         } else {
             lightsaberModel.whichLightsaber = "luke"
             mainView.lightsaberImage.setImage(UIImage(named: "lukelightsaber"), for: .normal)
             mainView.saberImage.image = UIImage(named: "bluesaber")
+            mainView.changeSideButton.setTitle("Dark Side", for: .normal)
         }
     }
 }

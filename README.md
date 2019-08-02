@@ -6,5 +6,3 @@ I am really happy with this project, however, it is not at it's final version as
 <p align="center">
 <img src="images/lightsaber1.png" width="240"  title="Lightsaber">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/lightsaber2.png" width="240" title="Lightsaber">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/lightsaber3.gif" width="241" title="Lightsaber">
 </p>
-
-https://github.com/shemishe/Lightsaber/blob/master/images/lightsaber1.png
